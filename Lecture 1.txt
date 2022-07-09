@@ -1,1 +1,31 @@
-fasd
+Link to Download git software : 
+https://github.com/git-for-windows/git/releases/download/v2.37.0.windows.1/Git-2.37.0-64-bit.exe
+
+Check Version :
+git --version
+
+initialize git : 
+git init
+
+configure git:
+git config --global user.name "sarang deodhar" 
+git config --global user.email "saranggdeodhar@gmail.com"
+
+to add file in repo to platform/staging area:
+git add file_name
+git add *
+git add *.file_Extention
+git add .
+
+to remove file from staging area:
+git rm --cached file_name
+
+to check the list of files in staging area:
+git status
+
+to check the work we done till now:
+gitk
+
+
+
+
