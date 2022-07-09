@@ -11,7 +11,7 @@ configure git (tracking):
 git config --global user.name "sarang deodhar" 
 git config --global user.email "saranggdeodhar@gmail.com"
 
-to add file in repo to platform/staging area:
+to add file in file system to platform/staging area:
 git add file_name
 git add *
 git add *.file_Extention
@@ -23,12 +23,14 @@ To understand difference between all the types of add tecnhique go through follo
 https://www.youtube.com/watch?v=tcd4txbTtAY - Corey Schafer
 
 
-to remove file from staging area (non-tracking the file):
-git rm --cached file_name
-
 to check the list of files in staging area:
 git status
 
+to commit the file from staging area to repo:
+git commit -m "any comment"
+
+to remove file from staging area (non-tracking the file):
+git rm --cached file_name
 to check the work we done till now:
 gitk
 
