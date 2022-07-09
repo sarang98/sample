@@ -11,6 +11,9 @@ configure git (tracking):
 git config --global user.name "sarang deodhar" 
 git config --global user.email "saranggdeodhar@gmail.com"
 
+create new file:
+touch file_name
+
 to add file in file system to platform/staging area:
 git add file_name
 git add *
@@ -36,6 +39,9 @@ gitk
 
 to list the content from the directory
 ls *
+
+Q.how to ignore files
+=> add file name to .ignore file
 
 
 
