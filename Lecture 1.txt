@@ -7,7 +7,7 @@ git --version
 initialize git : 
 git init
 
-configure git:
+configure git (tracking):
 git config --global user.name "sarang deodhar" 
 git config --global user.email "saranggdeodhar@gmail.com"
 
@@ -15,9 +15,15 @@ to add file in repo to platform/staging area:
 git add file_name
 git add *
 git add *.file_Extention
-git add .
+git add -u
+git add . 			(upload both tracked and untracked files, also dot files).
+git add -A			(upload both tracked and untracked files, also dot files).
 
-to remove file from staging area:
+To understand difference between all the types of add tecnhique go through following link:
+https://www.youtube.com/watch?v=tcd4txbTtAY - Corey Schafer
+
+
+to remove file from staging area (non-tracking the file):
 git rm --cached file_name
 
 to check the list of files in staging area:
@@ -25,6 +31,9 @@ git status
 
 to check the work we done till now:
 gitk
+
+to list the content from the directory
+ls *
 
 
 
