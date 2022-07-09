@@ -34,7 +34,11 @@ git commit -m "any comment"
 
 to remove file from staging area (non-tracking the file):
 git rm --cached file_name
-to check the work we done till now:
+
+to check the work we done on last branch:
+git show
+
+to check the work till now:
 gitk
 
 to list the content from the directory
@@ -42,6 +46,9 @@ ls *
 
 Q.how to ignore files
 => add file name to .ignore file
+
+for more study on git follow the link:
+https://git-scm.com/docs
 
 
 
