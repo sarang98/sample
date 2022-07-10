@@ -1,3 +1,5 @@
+Part 1 
+********************************************************************************************
 Link to Download git software : 
 https://github.com/git-for-windows/git/releases/download/v2.37.0.windows.1/Git-2.37.0-64-bit.exe
 
@@ -7,6 +9,7 @@ git --version
 initialize git : 
 git init
 
+********************************************************************************************
 configure git (tracking):
 git config --global user.name "sarang deodhar" 
 git config --global user.email "saranggdeodhar@gmail.com"
@@ -17,30 +20,38 @@ system - git installation folder
 
 to get detailed location :
 git config --list --show-origin
+********************************************************************************************
 
 create new file:
 touch file_name
 
+********************************************************************************************
+
 to add file in file system to platform/staging area:
 git add file_name
-git add *
-git add *.file_Extention
-git add -u
-git add . 			(upload both tracked and untracked files, also dot files).
-git add -A			(upload both tracked and untracked files, also dot files).
+git add *			(* is specially for shell command, upload all files except
+git add *.file_Extention		hidden files and deleted files).
+git add -u			(upload deleted and modified but not untracked file)
+git add . 			(. represent current directory)
+git add -A			(-A uploads everything in entire working tree)
+git add --no-all		(ignore updating the list for deleted files)
 
 To understand difference between all the types of add tecnhique go through following link:
 https://www.youtube.com/watch?v=tcd4txbTtAY - Corey Schafer
 
+Note:- use add -A or -u for better efficiency.
+********************************************************************************************
 
 to check the list of files in staging area:
 git status
 
+to remove file from staging area (non-tracking the file):
+git rm --cached file_name
+
 to commit the file from staging area to repo:
 git commit -m "any comment"
 
-to remove file from staging area (non-tracking the file):
-git rm --cached file_name
+********************************************************************************************
 
 to check the work we done on last branch:
 git show
@@ -48,8 +59,17 @@ git show
 to check the work till now:
 gitk
 
+********************************************************************************************
+
 to list the content from the directory
-ls *
+ls *		(wont work for deleted files or hidden files).
+
+********************************************************************************************
+
+clear screen:
+clear
+
+********************************************************************************************
 
 Q.how to ignore files
 => add file name to .ignore file
@@ -59,6 +79,21 @@ https://git-scm.com/docs
 
 complete list of all commands:
 https://git-scm.com/docs/git#_git_commands
+
+********************************************************************************************
+********************************************************************************************
+
+Part 2
+********************************************************************************************
+To create branch:
+git branch new_branch_name
+
+Note:- never jump from one branch to another branch without commiting your work.
+
+********************************************************************************************
+
+switch to another branch:
+
 
 
 
