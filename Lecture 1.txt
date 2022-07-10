@@ -1,5 +1,5 @@
 Part 1 
-********************************************************************************************
+*********************************************************************************
 Link to Download git software : 
 https://github.com/git-for-windows/git/releases/download/v2.37.0.windows.1/Git-2.37.0-64-bit.exe
 
@@ -9,23 +9,27 @@ git --version
 initialize git : 
 git init
 
-********************************************************************************************
+*********************************************************************************
+
 configure git (tracking):
 git config --global user.name "sarang deodhar" 
 git config --global user.email "saranggdeodhar@gmail.com"
 
 local - project level folder (repository/.git/config)
+
 global - os user/admin (eg win - sarang user, guest user, friends user) (users/dell/.gitconfig)
+
 system - git installation folder
 
 to get detailed location :
 git config --list --show-origin
-********************************************************************************************
+
+*********************************************************************************
 
 create new file:
 touch file_name
 
-********************************************************************************************
+*********************************************************************************
 
 to add file in file system to platform/staging area:
 git add file_name
@@ -40,7 +44,8 @@ To understand difference between all the types of add tecnhique go through follo
 https://www.youtube.com/watch?v=tcd4txbTtAY - Corey Schafer
 
 Note:- use add -A or -u for better efficiency.
-********************************************************************************************
+
+*********************************************************************************
 
 to check the list of files in staging area:
 git status
@@ -51,7 +56,7 @@ git rm --cached file_name
 to commit the file from staging area to repo:
 git commit -m "any comment"
 
-********************************************************************************************
+*********************************************************************************
 
 to check the work we done on last branch:
 git show
@@ -59,17 +64,17 @@ git show
 to check the work till now:
 gitk
 
-********************************************************************************************
+*********************************************************************************
 
 to list the content from the directory
 ls *		(wont work for deleted files or hidden files).
 
-********************************************************************************************
+*********************************************************************************
 
 clear screen:
 clear
 
-********************************************************************************************
+*********************************************************************************
 
 Q.how to ignore files
 => add file name to .ignore file
@@ -80,21 +85,79 @@ https://git-scm.com/docs
 complete list of all commands:
 https://git-scm.com/docs/git#_git_commands
 
-********************************************************************************************
-********************************************************************************************
+******************************************************************************************************************************************************************
 
 Part 2
-********************************************************************************************
-To create branch:
+*********************************************************************************To create branch:
 git branch new_branch_name
 
 Note:- never jump from one branch to another branch without commiting your work.
 
-********************************************************************************************
+*********************************************************************************
 
 switch to another branch:
+git checkout branch_name
 
+*********************************************************************************
 
+add remote repository:
+git remote add origin "https://github.com/sarang98/sample"
 
+*********************************************************************************
 
+check the remote repository:
+git remote
 
+*********************************************************************************
+
+push git-committed-data to github:
+git push -u origin master
+
+*********************************************************************************
+
+download data from new link:
+git clone URL
+
+download data from connected repo. (already set-up remote)
+1) in current branch
+git pull
+2) in another branch
+git pull origin master (origin - remote branch & master - local branch)
+
+download data using fetch
+git fetch URL
+or
+git fetch origin master
+
+to check fetch data
+-git branch -a
+
+*********************************************************************************
+
+copy the data from another branch:
+1) go the brach where u want to copy data and then type the following command-
+git merge another_branch
+
+*********************************************************************************
+
+Part 3
+*********************************************************************************
+list branches:
+git branch
+
+*********************************************************************************
+
+change name of branch:
+1) current branch
+git branch -m new_name
+
+2) other branch
+git branch -m old_name new_name
+
+after changing name of the branch, update it into github:
+git push origin : old_name new_name
+
+*********************************************************************************
+
+to get the list of commits:
+git log origin/master
