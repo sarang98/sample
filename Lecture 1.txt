@@ -11,6 +11,13 @@ configure git (tracking):
 git config --global user.name "sarang deodhar" 
 git config --global user.email "saranggdeodhar@gmail.com"
 
+local - project level folder (repository/.git/config)
+global - os user/admin (eg win - sarang user, guest user, friends user) (users/dell/.gitconfig)
+system - git installation folder
+
+to get detailed location :
+git config --list --show-origin
+
 create new file:
 touch file_name
 
@@ -49,6 +56,9 @@ Q.how to ignore files
 
 for more study on git follow the link:
 https://git-scm.com/docs
+
+complete list of all commands:
+https://git-scm.com/docs/git#_git_commands
 
 
 
